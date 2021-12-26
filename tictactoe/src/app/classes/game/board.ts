@@ -1,4 +1,3 @@
-import { randomInt } from "crypto";
 import { Player } from "./player";
 import { Space } from "./space";
 
@@ -31,6 +30,10 @@ export class Board {
         * History of moves player Y made.
         */
        moveOHistory:Array<number>;
+       
+       getRandomInt(max:number) {
+        return Math.floor(Math.random() * max);
+    }
    
        /**
         * Initializes the game board,players and class variables.
@@ -43,7 +46,7 @@ export class Board {
            this.players = new Array<Player>();
            this.players.push(new Player("x"));
            this.players.push(new Player("o"));
-           this.currentTurn = this.players[randomInt(this.players.length)].name;
+           this.currentTurn = this.players[this.getRandomInt(this.players.length)].name;
            this.boardHistory = new Array<Board>();
            this.moveXHistory = new Array<number>();
            this.moveOHistory = new Array<number>();

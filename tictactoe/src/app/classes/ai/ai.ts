@@ -56,7 +56,8 @@ export class AI {
           this.testCases = 100.0;
           this.testLossCounter = 0.0;
           this.testWinCounter = 0.0;
-          this.trainingGames = 1000000.0;
+          //this.trainingGames = 1000000.0;
+          this.trainingGames=1;
       }
   
       /**
