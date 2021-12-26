@@ -1,0 +1,11 @@
+<div class="board-container">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+        <app-box id="{{box.className}}" class="block" *ngFor="let box of boxes" [value]="box.value"></app-box>
+    </div>
+</div>
+<div class="container">
+    <!-- REST OF THE CODE -->
+    <h2 id="winner"></h2>
+    <button onclick="reset_board()">RESET BOARD</button>
+  </div>
